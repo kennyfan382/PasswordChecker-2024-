@@ -100,7 +100,7 @@ def SeeAdmin():
            @@@@@              @@@@@@@              @@@@@
           @@@@@@@                                 @@@@@@@
            @@@@@                                   @@@@@
-        """
+        """ #Skull found on https://ascii.co.uk/art/skulls
         for char in skull:
             print(char, end='', flush=True)
             time.sleep(0.01) #Prints the skull in a cool way
