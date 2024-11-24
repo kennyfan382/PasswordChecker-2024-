@@ -2,14 +2,14 @@ import random
 import time
 import sys
 
-# DATA TO BE MANIPULATED
+# DATA TO BE MANIPULATED + PASSWORDS TO BE FOUND
 Data1 = [5004, 2008, 9003, 4000, 4017, 5026, 3431]
 Data2 = [7896, 5328, 4810, 5551, 8024, 9055, 6117]
 Data3 = [3347, 4490, 6632, 8932, 4567, 8096, 7865]
 
 ADMINPASSWORD = Data1[5] + Data2[5] + Data3[5]
 
-CorrectData = {
+CorrectData = { #The default correct passwords
     Data1[2]: 1,  # default = 9003
     Data2[5]: 2,  # default = 9055 (CHANGING THIS ONE AFFECTS ADMIN PASSWORD)
     Data3[3]: 3,  # default = 8932
@@ -19,7 +19,7 @@ CorrectData = {
 
 # Functions of this program
 
-def Intro(stage):
+def Intro(stage): #Introduces the user
     counter = 6
     while stage < counter:  # prints out all the lists for a cool title
         rotator = random.choice([Data1, Data2, Data3])
@@ -27,7 +27,7 @@ def Intro(stage):
         time.sleep(0.1)
         stage += 1
 
-    def title(title):
+    def title(title): #Prints new line the string password checker
         for char in title:  # loops over each character in the title
             print(char)
             time.sleep(0.075)
@@ -40,7 +40,7 @@ def Intro(stage):
 Intro(0)
 
 
-def AffectAdmin(DI, Dataset):
+def AffectAdmin(DI, Dataset): #Displays a message if Agent 2 password is changed to show how much the ADMINPASSWORD has changed
     if DI < Dataset:
         Difference = Dataset - DI
         print(f'ADMIN PASSWORD CHANGED BY -{Difference}')
@@ -69,7 +69,7 @@ def Incorrect_Input_Handler(text, type): #Text = What the input says   Type = Wh
             print(TyErr) #Same as value error except
 
 
-def SeeAdmin():
+def SeeAdmin(): #ADMIN can see his password
     checkAge = Incorrect_Input_Handler('How old are you?: ', int)
     if checkAge == 18: #(my age as of writing this program)
         print('Write this down... You have 10 seconds')
@@ -107,7 +107,7 @@ def SeeAdmin():
         sys.exit(3)
 
 
-def recover():
+def recover(): #Recover access via changing the users password
     global ADMINPASSWORD #In the event of Agent 2 being changed (Data2[5]) the ADMINPASSWORD must be changed globally as well
     Q = Incorrect_Input_Handler('Have you forgotten your password? (Y/N): ', str).lower()
     if Q == 'y':
@@ -152,7 +152,7 @@ def paa():  # If ADMIN ACCESS is "given"
         print('ADMIN ACCESS GRANTED ' * i)
 
 
-def passwdchecker():
+def passwdchecker(): #Where it all leads to, will data from previous functions mach ths password
     user_input = Incorrect_Input_Handler('Please enter your password: ', int)
     Find = CorrectData.get(user_input)
     if Find is None or user_input is None:
