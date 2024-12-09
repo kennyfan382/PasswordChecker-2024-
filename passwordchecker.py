@@ -78,32 +78,7 @@ def SeeAdmin(): #ADMIN can see his password
         time.sleep(10)
         passwdchecker()
     else:
-        print('Bet you thought you were slick.')
-        skull = """
-          @@@@@@@                                      @@@@@@@
-        @@@@@@@           @@@@@@@@@@@@@@@            @@@@@@@
-         @@@@@@@@       @@@@@@@@@@@@@@@@@@@        @@@@@@@@
-             @@@@@     @@@@@@@@@@@@@@@@@@@@@     @@@@@
-               @@@@@  @@@@@@@@@@@@@@@@@@@@@@@  @@@@@
-                 @@  @@@@@@@@@@@@@@@@@@@@@@@@@  @@
-                    @@@@@@@    @@@@@@    @@@@@@
-                    @@@@@@      @@@@      @@@@@
-                    @@@@@@      @@@@      @@@@@
-                     @@@@@@    @@@@@@    @@@@@
-                      @@@@@@@@@@@  @@@@@@@@@@
-                       @@@@@@@@@@  @@@@@@@@@
-                   @@   @@@@@@@@@@@@@@@@@   @@
-                   @@@@  @@@@ @ @ @ @ @@@@  @@@@
-                  @@@@@   @@@ @ @ @ @ @@@   @@@@@
-                @@@@@      @@@@@@@@@@@@@      @@@@@
-              @@@@          @@@@@@@@@@@          @@@@
-           @@@@@              @@@@@@@              @@@@@
-          @@@@@@@                                 @@@@@@@
-           @@@@@                                   @@@@@
-        """ #Skull found on https://ascii.co.uk/art/skulls
-        for char in skull:
-            print(char, end='', flush=True)
-            time.sleep(0.01) #Prints the skull in a cool way
+        print('Incorrect. Access denied')
         sys.exit(3)
 
 
