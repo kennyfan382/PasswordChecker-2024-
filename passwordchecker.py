@@ -10,9 +10,9 @@ Data3 = [3347, 4490, 6632, 8932, 4567, 8096, 7865]
 ADMINPASSWORD = Data1[5] + Data2[5] + Data3[5]
 
 CorrectData = { #The default correct passwords
-    Data1[2]: 1,  # default = 9003
-    Data2[5]: 2,  # default = 9055 (CHANGING THIS ONE AFFECTS ADMIN PASSWORD)
-    Data3[3]: 3,  # default = 8932
+    Data1[2]: 1,  # default = 9003 #Name: Agent1
+    Data2[5]: 2,  # default = 9055 (CHANGING THIS ONE AFFECTS ADMIN PASSWORD) #Name: Agent2
+    Data3[3]: 3,  # default = 8932 #Name: Agent3
     ADMINPASSWORD: 4
 }
 
